@@ -1,0 +1,278 @@
+/* global styles  */
+@font-face {
+    font-family: poppins;
+    src: url('./fonts/Poppins/Poppins-Regular.ttf');
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: poppins;
+}
+
+body {
+    background: #f4faff;
+    padding: 10px 20px;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    margin: .2px auto;
+}
+
+.header {
+    padding: 10px 0px;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    color: #33ff;
+    text-align: center;
+}
+
+.formSearch {
+    padding: 10px 0;
+}
+
+.formSearch input[type="text"], 
+.addForm input[type="text"]  {
+    padding: 7px;
+    outline: none;
+    border: transparent;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 100%;
+    transition: all 0.4s ease-in;
+}
+
+.formSearch input[type="text"]::placeholder,
+.addForm input[type="text"]::placeholder {
+    font-size: 16px;
+    padding-left: 20px;
+    font-style: oblique;
+}
+
+.formSearch input[type="text"]:hover, 
+.formSearch input[type="text"]:focus,
+.addForm  input[type="text"]:hover, 
+.addForm  input[type="text"]:focus  {
+    border :1px solid #33ff ;
+}
+
+
+.mainUl {
+    max-width: 400px;
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mainUl li {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.mainUl li div {
+    font-size: 14.5px;
+    overflow-x: hidden;
+    opacity: .8;
+    color: #333;
+}
+
+.allIcon {
+    display: flex;
+    gap: 10px;
+}
+
+.allIcon  i {
+    position: relative;
+    color: #333;
+    font-size: 1.2rem;
+    opacity: .8;
+    cursor: pointer;
+}
+
+.addForm {
+    padding: 30px 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.addForm label {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #33ff;
+}
+
+.showDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.showDate span {
+    opacity: .8;
+    color: #333;
+    font-size: 1.2em;
+}
+
+
+.lineThrough {
+    text-decoration: line-through;
+    color: #33ff !important;
+}
+
+.iconColor {
+    color: #fff !important;
+    background: #33ff;
+    border-radius: 50%;
+    padding: 1.5px 1px;
+}
+
+.filtered {
+    display: none !important;
+}
+
+.textBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+}
+
+.textSuccess {
+    color: #33ff;
+}
+
+.textBox i {
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #33ff;
+}
+
+/* on load display content */
+.mainload {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)) ;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    visibility: hidden;
+    transition: all 0.2s ease-in;
+}
+
+.show {
+    visibility: visible;
+}
+
+.loadCenter {
+    position: relative;
+    width: 90%;
+    height: 240px;
+    margin: .1px auto;
+    padding: 20px 20px;
+    background: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: all 0.5s ease-in;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .loadCenter {
+        width: 50%;
+    }
+}
+
+.cancelBtn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.3rem;
+    color: #33ff;
+    cursor: pointer;
+}
+
+.welcomeIcon {
+    font-size: 1.5rem;
+    padding-left: 0.2rem;
+    color: #33ff;
+}
+
+.show .loadCenter {
+    transform: translateY(200px);
+    opacity: 1;
+}
+
+ .welcome {
+    margin-top: 10px;
+}
+
+.ref {
+    margin-top: 10px;
+}
+.start {
+    background: #33ff;
+    padding: 5px 8px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    margin-top:1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.heart {
+    font-size: 1.2rem;
+    color: crimson;
+    transition: all 0.6s ease-in;
+    animation: increase 0.9s 2s linear infinite;
+}
+
+@keyframes increase {
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.footerText {
+    position: absolute;
+    top: 13rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.gitLink {
+    color: #33ff;
+    opacity: 0.7;
+}

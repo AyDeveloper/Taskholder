@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskHolder</title>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/bc7548f100.js" crossorigin="anonymous"></script>
+    <!-- custom css  -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- main container -->
+  <main class="container">
+    <header class="header">
+        <h1>Task Holder</h1>
+
+        <div class="showDate">
+            <span class="date"></span>
+            <span class="time"></span>
+        </div>
+        
+        <form class="formSearch">
+            <input type="text" placeholder="Search Task" name="search">
+        </form>
+    </header>
+
+        <div class="textContainer">
+          
+        </div>
+
+    <ul class="mainUl">
+        <li>
+            <div class="text">Learn Javascript</div>
+            <div class="allIcon">
+                    <i class="far fa-circle circle" job="circleIcon"></i>
+                    <i class="far fa-trash-alt delete"></i>
+            </div>
+        </li>
+        <li>
+            <div class="text">Build Project</div>
+            <div class="allIcon">
+                    <i class="far fa-circle circle"></i>
+                    <i class="far fa-trash-alt delete"></i>
+            </div>
+        </li>
+        <li>
+            <div class="text">Keep Buiding</div>
+            <div class="allIcon">
+                <i class="far fa-circle circle"></i>
+                <i class="far fa-trash-alt delete"></i>
+            </div>
+        </li>
+    </ul>
+
+    <form class="addForm">
+        <label>Add Task</label>
+        <input type="text" name="add" id="add" placeholder="Write your next task">
+    </form>
+  </main>
+  <!-- end of main container --> 
+  
+  
+  <!-- on load display -->
+  <div class="mainload">
+      <div class="loadCenter">
+          <i class="far fa-times-circle cancelBtn"></i>
+          <div class="welcome">Welcome to Taskholder &#128075;</div>
+          <p class="ref">This is a custom todo app, just a rebrand for the sake of this project &#128512;</p>
+          <button class="start">Get Started</button>
+
+          <p class="footerText">Made with <i class="fas fa-heart heart"></i> by <a href="https://github.com/AyDeveloper" class="gitLink">Aydeveloper</a></p>
+      </div>
+  </div>
+
+<!-- script  -->
+<script src="app.js"></script>
+</body>
+</html>
